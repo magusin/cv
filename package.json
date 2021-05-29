@@ -1,0 +1,23 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cv": "node-sass -w scss -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/O-clock-Sheherazade/cv.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/O-clock-Sheherazade/cv/issues"
+  },
+  "homepage": "https://github.com/O-clock-Sheherazade/cv#readme",
+  "dependencies": {
+    "node-sass": "^6.0.0"
+  }
+}
