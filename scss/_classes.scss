@@ -4,3 +4,9 @@
         font-size: 1.8rem;
     }
 }
+
+.text {
+    &-primary {
+        color: var(--primary);
+    }
+}
