@@ -42,9 +42,22 @@ img {
 .mb-5 {
   margin-bottom: 5rem !important; }
 
+@keyframes move {
+  0% {
+    transform: rotate(-20deg); }
+  10% {
+    transform: rotate(-10deg); }
+  70% {
+    transform: rotate(10deg); }
+  80% {
+    transform: rotate(-5deg); }
+  90% {
+    transform: rotate(5deg); }
+  100% {
+    transform: rotate(0deg); } }
+
 body {
-  display: flex;
-  height: 100vh; }
+  display: flex; }
 
 .picture {
   height: 340px;
@@ -53,6 +66,9 @@ body {
     border-radius: 50%;
     box-shadow: 1px 1px 10px 1px black;
     background: var(--fitback); }
+  .picture span {
+    display: inline-block;
+    animation: move 2s; }
 
 .container-3 {
   display: flex;
@@ -86,9 +102,16 @@ header {
 
 .social-container {
   display: flex;
-  align-items: center; }
-  .social-container > p {
+  align-items: center;
+  transition: all 0.2s; }
+  .social-container p {
     padding: 0 0 0 20px; }
+  .social-container:hover {
+    background: var(--border); }
+    .social-container:hover i {
+      color: var(--primary);
+      transition: scale(1.3);
+      transition: all 0.2s; }
 
 .adress-wrapper {
   display: flex;

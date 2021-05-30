@@ -2,11 +2,11 @@
 @import "base";
 @import "classes";
 @import "utils";
+@import "animations";
 
 
 body {
   display: flex;
-  height: 100vh;
 };
 
 .picture {
@@ -17,6 +17,10 @@ body {
     border-radius: 50%;
     box-shadow: 1px 1px 10px 1px black;
     background: var(--fitback);
+  }
+  span {
+    display: inline-block;
+    animation: move 2s;
   }
 }
 
@@ -59,9 +63,19 @@ header {
 .social-container {
   display: flex;
   align-items: center;
-  > p {
+  transition: all 0.2s;
+  p {
     padding: 0 0 0 20px;
-  };
+
+  }
+  &:hover {
+background: var(--border);
+    i{
+  color: var(--primary);
+  transition: scale(1.3);
+  transition: all 0.2s;
+    }
+  }
 }
 
 .adress-wrapper {
