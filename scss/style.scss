@@ -2,6 +2,7 @@
 @import "base";
 @import "classes";
 
+$skills: 5px;
 .grid-container {
   display: grid;
   min-height: 100vh;
@@ -63,12 +64,13 @@ header {
         position: relative;
         .bar-skill-progress {
           position: absolute;
-          height: 5px;
+          height: $skills;
           top: 0;
           left: 0;
           width: 80%;
           background: var(--light);
         }
+        
         .bar-skill-dot {
             position: absolute;
             height: 10px;
@@ -81,54 +83,54 @@ header {
           .bar-skill-progress-2 {
             position: absolute;
             height: 5px;
-            top: 0;
-            left: 0;
-            width: 60%;
-            background: var(--light);
-          }
-          .bar-skill-dot-2 {
-              position: absolute;
-              height: 10px;
-              width: 10px;
-              background: var(--dark);
-              left: calc(60% - 5px);
-              top: -2.5px;
-              transform: rotate(45deg);
-            }
-            .bar-skill-progress-3 {
-                position: absolute;
-                height: 5px;
-                top: 0;
-                left: 0;
-                width: 50%;
-                background: var(--light);
-              }
-              .bar-skill-dot-3 {
-                  position: absolute;
-                  height: 10px;
-                  width: 10px;
-                  background: var(--dark);
-                  left: calc(50% - 5px);
-                  top: -2.5px;
-                  transform: rotate(45deg);
-                }
-                .bar-skill-progress-4 {
-                    position: absolute;
-                    height: 5px;
-                    top: 0;
-                    left: 0;
-                    width: 30%;
-                    background: var(--light);
-                  }
-                  .bar-skill-dot-4 {
-                      position: absolute;
-                      height: 10px;
-                      width: 10px;
-                      background: var(--dark);
-                      left: calc(30% - 5px);
-                      top: -2.5px;
-                      transform: rotate(45deg);
-                    }
+           top: 0;
+           left: 0;
+             width: 60%;
+             background: var(--light);
+           }
+           .bar-skill-dot-2 {
+               position: absolute;
+               height: 10px;
+               width: 10px;
+               background: var(--dark);
+               left: calc(60% - 5px);
+               top: -2.5px;
+               transform: rotate(45deg);
+             }
+             .bar-skill-progress-3 {
+                 position: absolute;
+                 height: 5px;
+                 top: 0;
+                 left: 0;
+                 width: 50%;
+                 background: var(--light);
+               }
+               .bar-skill-dot-3 {
+                   position: absolute;
+                   height: 10px;
+                   width: 10px;
+                   background: var(--dark);
+                   left: calc(50% - 5px);
+                   top: -2.5px;
+                   transform: rotate(45deg);
+                 }
+                 .bar-skill-progress-4 {
+                     position: absolute;
+                     height: 5px;
+                     top: 0;
+                     left: 0;
+                     width: 30%;
+                     background: var(--light);
+                   }
+                   .bar-skill-dot-4 {
+                       position: absolute;
+                       height: 10px;
+                       width: 10px;
+                       background: var(--dark);
+                       left: calc(30% - 5px);
+                       top: -2.5px;
+                       transform: rotate(45deg);
+                     }
         }
         .stars-container {
           display: flex;
@@ -139,9 +141,34 @@ header {
             margin: 0 1rem;
           }
         }
+        .social-container {
+          display: flex;
+          justify-content: start;
+          align-items: center;
+          margin: 2rem 0;
+          i {
+            font-size: 2rem;
+            flex: 0 0 50px;
+            margin-right: 1rem;
+          }
+          p {
+            flex: auto;
+            margin: 0;
+          }
+        }
       }
     }
 
+
+
     main {
         grid-area: main;
+        padding: 5rem;
+        h2 {
+          margin-bottom: 4rem;
+        }
+        p {
+          letter-spacing: 0.1rem;
+          line-height: 3rem;
+        }
       }
