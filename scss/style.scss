@@ -3,6 +3,7 @@
 @import "classes";
 @import "utils";
 @import "animations";
+@import "media-queries";
 
 
 body {
@@ -86,7 +87,9 @@ background: var(--border);
 .container {
   display: flex;
   flex-wrap: wrap;
-
+  @include sm {
+   display: block;
+  }
 }
 
 
@@ -95,7 +98,10 @@ background: var(--border);
   text-align: center;
   margin: auto;
   padding: 0.2em 2em;
-
+  @include sm {
+    width: auto;
+    text-align: center;
+   }
  h3 {
   border: 1px solid var(--primary);
   text-align: center;
@@ -127,7 +133,6 @@ background: var(--border);
 display: flex;
 flex-wrap: wrap;
 flex-direction: column;
-
 width: 150px;
 .container-skill {
 display: flex;
