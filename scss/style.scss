@@ -37,7 +37,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding: 0 2em 1em 0;
+  
 }
 
 li {
@@ -88,12 +88,9 @@ background: var(--border);
   transition: all 0.2s;
     }
   }
-}
-
-
-.adress-wrapper {
-  display: flex;
-  flex-direction: column;
+  a {
+    text-decoration: underline;
+  }
 }
 
 .container {
@@ -101,7 +98,9 @@ background: var(--border);
   flex-wrap: wrap;
   @include sm {
    display: block;
+   align-items: center;
   }
+ 
 }
 
 
@@ -139,29 +138,74 @@ background: var(--border);
      margin: 0 0.5rem;
              }
   }
-
 }
 .container-2 {
-display: flex;
-flex-wrap: wrap;
-flex-direction: column;
-width: 150px;
-.container-skill {
-display: flex;
-justify-content: space-between;
- h3 {
-   font-size: 1em;
- }
-.bar-skill {
-  margin: 1rem 0 0.5rem 0.5em;
-  size: 1em;
   display: flex;
-  flex-direction: row;
-  width: 50%;
-  
-  height: 5px;
-  background: var(--hint);
-  position: relative;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 30%;
+  margin: 1em;
+  @include md {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 40%;
+    margin: 0.5em;
+  }
+  @include sm {
+    display: block;
+    flex-direction: column;
+    width: auto;
+    margin: 1em;
+    align-items: center;
+    
+  }
+  @include xl {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 30%;
+    margin: 1em;
+  }
+  h4 {
+    font-size: 1em;
+    text-align: center;
+    color: var(--primary);
+    // text-decoration: underline;
+    border-bottom: 1px solid blue;
+    
+  }
+  .container-skill {
+  display: flex;
+  justify-content: space-around;
+
+   h3 {
+     font-size: 0.8em;
+     width: 5em;
+    @include md {
+      font-size: 0.8em;
+     width: 6em;
+    }
+   }
+  .bar-skill {
+    margin: 2rem 0 0.5rem 0.5em;
+    size: 1em;
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    height: 5px;
+    background: var(--hint);
+    position: relative;
+    @include md {
+      margin: 1.5rem 0 0.5rem 0.5em;
+      size: 1em;
+      display: flex;
+      flex-direction: row;
+      width: 40%;
+      height: 5px;
+      background: var(--hint);
+      position: relative;
+    }
   
   .bar-skill-progress {
     position: absolute;
