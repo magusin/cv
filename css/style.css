@@ -133,7 +133,8 @@ header {
   flex-wrap: wrap; }
   @media (max-width: 767px) {
     .container {
-      display: block; } }
+      display: block;
+      align-items: center; } }
 
 .exp-container {
   width: 50%;
@@ -169,6 +170,27 @@ header {
   flex-direction: column;
   width: 30%;
   margin: 1em; }
+  @media (min-width: 768px) and (max-width: 979px) {
+    .container-2 {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      width: 40%;
+      margin: 0.5em; } }
+  @media (max-width: 767px) {
+    .container-2 {
+      display: block;
+      flex-direction: column;
+      width: auto;
+      margin: 1em;
+      align-items: center; } }
+  @media (min-width: 1200px) {
+    .container-2 {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      width: 30%;
+      margin: 1em; } }
   .container-2 h4 {
     font-size: 1em;
     text-align: center;
@@ -179,7 +201,11 @@ header {
     justify-content: space-around; }
     .container-2 .container-skill h3 {
       font-size: 0.8em;
-      width: 2em; }
+      width: 5em; }
+      @media (min-width: 768px) and (max-width: 979px) {
+        .container-2 .container-skill h3 {
+          font-size: 0.8em;
+          width: 6em; } }
     .container-2 .container-skill .bar-skill {
       margin: 2rem 0 0.5rem 0.5em;
       size: 1em;
@@ -189,6 +215,16 @@ header {
       height: 5px;
       background: var(--hint);
       position: relative; }
+      @media (min-width: 768px) and (max-width: 979px) {
+        .container-2 .container-skill .bar-skill {
+          margin: 1.5rem 0 0.5rem 0.5em;
+          size: 1em;
+          display: flex;
+          flex-direction: row;
+          width: 40%;
+          height: 5px;
+          background: var(--hint);
+          position: relative; } }
       .container-2 .container-skill .bar-skill .bar-skill-progress {
         position: absolute;
         height: 80%;

@@ -98,7 +98,9 @@ background: var(--border);
   flex-wrap: wrap;
   @include sm {
    display: block;
+   align-items: center;
   }
+ 
 }
 
 
@@ -143,6 +145,28 @@ background: var(--border);
   flex-direction: column;
   width: 30%;
   margin: 1em;
+  @include md {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 40%;
+    margin: 0.5em;
+  }
+  @include sm {
+    display: block;
+    flex-direction: column;
+    width: auto;
+    margin: 1em;
+    align-items: center;
+    
+  }
+  @include xl {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 30%;
+    margin: 1em;
+  }
   h4 {
     font-size: 1em;
     text-align: center;
@@ -157,7 +181,11 @@ background: var(--border);
 
    h3 {
      font-size: 0.8em;
-     width: 2em;
+     width: 5em;
+    @include md {
+      font-size: 0.8em;
+     width: 6em;
+    }
    }
   .bar-skill {
     margin: 2rem 0 0.5rem 0.5em;
@@ -165,12 +193,19 @@ background: var(--border);
     display: flex;
     flex-direction: row;
     width: 30%;
-    
-    
     height: 5px;
     background: var(--hint);
     position: relative;
-    
+    @include md {
+      margin: 1.5rem 0 0.5rem 0.5em;
+      size: 1em;
+      display: flex;
+      flex-direction: row;
+      width: 40%;
+      height: 5px;
+      background: var(--hint);
+      position: relative;
+    }
   
   .bar-skill-progress {
     position: absolute;
