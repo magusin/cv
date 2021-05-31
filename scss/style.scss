@@ -8,16 +8,24 @@
 
 body {
   display: flex;
+  @include sm {
+    flex-direction: column;
+  }
+  
 };
 
 .picture {
-  height: 340px;
-  padding: 30px;
+  align-items: center;
+ margin: auto;
 
   > img {
     border-radius: 50%;
     box-shadow: 1px 1px 10px 1px black;
     background: var(--fitback);
+    height: 50%;
+    width: 50%;
+    margin: auto;
+    display: block;
   }
   span {
     display: inline-block;
@@ -41,6 +49,9 @@ header {
   width: 300px;
   background-color: rgb(251, 251, 251);
   border-right: 1px solid var(--border);
+  @include sm {
+    width: 100%;
+  }
 }
 
 .name {
@@ -78,6 +89,7 @@ background: var(--border);
     }
   }
 }
+
 
 .adress-wrapper {
   display: flex;
