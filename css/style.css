@@ -62,14 +62,21 @@ img {
 /* Large desktop */
 body {
   display: flex; }
+  @media (max-width: 767px) {
+    body {
+      flex-direction: column; } }
 
 .picture {
-  height: 340px;
-  padding: 30px; }
+  align-items: center;
+  margin: auto; }
   .picture > img {
     border-radius: 50%;
     box-shadow: 1px 1px 10px 1px black;
-    background: var(--fitback); }
+    background: var(--fitback);
+    height: 50%;
+    width: 50%;
+    margin: auto;
+    display: block; }
   .picture span {
     display: inline-block;
     animation: move 2s; }
@@ -88,6 +95,9 @@ header {
   width: 300px;
   background-color: #fbfbfb;
   border-right: 1px solid var(--border); }
+  @media (max-width: 767px) {
+    header {
+      width: 100%; } }
 
 .name {
   text-align: center;
