@@ -1,4 +1,34 @@
 .mb-5 {
     margin-bottom: 5rem !important;
   }
+
+.italic {
+   font-style: italic;
+}
   
+.subtitle {
+  display: block;
+  text-align: center;
+  font-size: 1em;
+  color: var(--primary);
+}
+
+.name {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.job {
+  text-align: center;
+  font-weight: 400;
+}
+
+.container-3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+
+
