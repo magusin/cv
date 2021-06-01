@@ -99,6 +99,7 @@ background: var(--border);
   @include sm {
    display: block;
    align-items: center;
+   
   }
  
 }
@@ -143,14 +144,14 @@ background: var(--border);
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  width: 30%;
+  width: 28%;
   margin: 1em;
   @include md {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 40%;
-    margin: 0.5em;
+    width: 33%;
+    margin: 2em;
   }
   @include sm {
     display: block;
@@ -160,12 +161,20 @@ background: var(--border);
     align-items: center;
     
   }
+  @include ld {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 25%;
+    margin: 1em 1.5em;
+    
+  }
   @include xl {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 30%;
-    margin: 1em;
+    width: 25%;
+    margin: 1em 2em;
   }
   h4 {
     font-size: 1em;
@@ -186,6 +195,10 @@ background: var(--border);
       font-size: 0.8em;
      width: 6em;
     }
+    @include xl {
+      font-size: 0.8em;
+     width: 3em;
+    }
    }
   .bar-skill {
     margin: 2rem 0 0.5rem 0.5em;
@@ -201,11 +214,32 @@ background: var(--border);
       size: 1em;
       display: flex;
       flex-direction: row;
-      width: 40%;
+      width: 30%;
       height: 5px;
       background: var(--hint);
       position: relative;
     }
+    @include ld {
+      margin: 1.5rem 0 0.5rem 0.5em;
+      size: 1em;
+      display: flex;
+      flex-direction: row;
+      width: 35%;
+      height: 5px;
+      background: var(--hint);
+      position: relative;
+    }
+    @include xl {
+      margin: 1.5rem 0 0.5rem 0.5em;
+      size: 1em;
+      display: flex;
+      flex-direction: row;
+      width: 35%;
+      height: 5px;
+      background: var(--hint);
+      position: relative;
+    }
+    
   
   .bar-skill-progress {
     position: absolute;
