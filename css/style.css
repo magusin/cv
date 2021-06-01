@@ -42,6 +42,29 @@ img {
 .mb-5 {
   margin-bottom: 5rem !important; }
 
+.italic {
+  font-style: italic; }
+
+.subtitle {
+  display: block;
+  text-align: center;
+  font-size: 1em;
+  color: var(--primary); }
+
+.name {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold; }
+
+.job {
+  text-align: center;
+  font-weight: 400; }
+
+.container-3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+
 @keyframes move {
   0% {
     transform: rotate(-20deg); }
@@ -61,7 +84,8 @@ img {
 /* Portrait tablet to landscape and desktop */
 /* Large desktop */
 body {
-  display: flex; }
+  display: flex;
+  background-color: #fafaff; }
   @media (max-width: 767px) {
     body {
       flex-direction: column; } }
@@ -81,13 +105,8 @@ body {
     display: inline-block;
     animation: move 2s; }
 
-.container-3 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around; }
-
 li {
-  font-size: 0.8em;
+  font-size: 1em;
   width: auto; }
 
 header {
@@ -97,21 +116,6 @@ header {
   @media (max-width: 767px) {
     header {
       width: 100%; } }
-
-.name {
-  text-align: center;
-  font-size: 1.2em;
-  font-weight: bold; }
-
-.job {
-  text-align: center;
-  font-weight: 400; }
-
-.subtitle {
-  display: block;
-  text-align: center;
-  font-size: 1em;
-  color: var(--primary); }
 
 .social-container {
   display: flex;
@@ -134,24 +138,24 @@ header {
   @media (max-width: 767px) {
     .container {
       display: block;
-      align-items: center; } }
-
-.exp-container {
-  width: 50%;
-  text-align: center;
-  margin: auto;
-  padding: 0.2em 2em; }
-  @media (max-width: 767px) {
-    .exp-container {
-      width: auto;
-      text-align: center; } }
-  .exp-container h3 {
-    border: 1px solid var(--primary);
-    text-align: center; }
+      align-items: center;
+      justify-content: center; } }
+  .container .exp-container {
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    padding: 0.2em 2em; }
+    @media (max-width: 767px) {
+      .container .exp-container {
+        width: auto;
+        text-align: center; } }
+    .container .exp-container h3 {
+      border: 1px solid var(--primary);
+      text-align: center; }
 
 .title-small {
   text-align: center;
-  background: linear-gradient(to left, var(--light), var(--primary)); }
+  background: linear-gradient(to left, var(--light), var(--background), var(--primary)); }
 
 .block {
   padding: 0 40px;
