@@ -12,7 +12,8 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^1.0.1",
+    "page d'accueil" : "https://www.hugo-jacques-cv.fr/movie" 
   },
   "scripts": {
     "start": "react-scripts start",
@@ -37,5 +38,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "homepage": "/movies/build/"
 }
