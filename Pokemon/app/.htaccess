@@ -1,0 +1,2 @@
+l# Directive Apache interdisant l'accès à ce dossier et tous ses sous-dossiers
+Deny from all
