@@ -1,4 +1,4 @@
-
+</main>
     <h3>Pokédex ©2021</h3>
 
     <!-- Optional JavaScript -->
