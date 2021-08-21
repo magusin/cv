@@ -29,8 +29,6 @@ a {
   color: var(--text);
   text-decoration: none; }
 
-img {
-  max-width: 100%; }
 
 .title-small {
   letter-spacing: 0.2rem;
@@ -97,8 +95,8 @@ body {
     border-radius: 50%;
     box-shadow: 1px 1px 10px 1px black;
     background: var(--fitback);
-    height: 50%;
-    width: 50%;
+    height: 150px;
+    width: 150px;
     margin: auto;
     display: block; }
   .picture span {
