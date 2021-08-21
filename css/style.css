@@ -29,6 +29,9 @@ a {
   color: var(--text);
   text-decoration: none; }
 
+.button {
+
+}
 
 .title-small {
   letter-spacing: 0.2rem;
@@ -101,7 +104,7 @@ body {
     display: block; }
   .picture span {
     display: inline-block;
-    animation: move 2s; }
+    animation: move 3s; }
 
 li {
   font-size: 1em;
