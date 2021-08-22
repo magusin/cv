@@ -12,6 +12,16 @@
       src="https://kit.fontawesome.com/83f4286022.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+<script>
+  const options = {
+    label: '🌓', 
+  }
+  function addDarkmodeWidget() {
+    new Darkmode(options).showWidget();
+  }
+  window.addEventListener('load', addDarkmodeWidget);
+</script>
     <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/style.css" />
     <title>CV</title>
