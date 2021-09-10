@@ -1,7 +1,7 @@
 <?php 
 
-$pokemon = $viewVars['pokemonDetail']; 
-$types = $viewVars['pokemonTypesList'];
+$pokemon = $viewVars['pokemon']; 
+$types = $viewVars['types'];
 
 if(!$pokemon) :
     echo "Oups, ce pokémon n'existe pas !";
@@ -48,16 +48,16 @@ else: ?>
                     </div>
                     <div class="stat">
                         <div class="label">Attaque Spé.</div>
-                        <div class="value"><?php echo $pokemon->getAttaque_Spe() ?></div>
+                        <div class="value"><?php echo $pokemon->getAttaqueSpe() ?></div>
                         <div class="stat_container">
-                            <div class="bar_value" style="width:<?php echo ($pokemon->getAttaque_Spe() * 100) / 255 ?>%"></div>
+                            <div class="bar_value" style="width:<?php echo ($pokemon->getAttaqueSpe() * 100) / 255 ?>%"></div>
                         </div>
                     </div>
                     <div class="stat">
                         <div class="label">Défense spé.</div>
-                        <div class="value"><?php echo $pokemon->getDefense_Spe() ?></div>
+                        <div class="value"><?php echo $pokemon->getDefenseSpe() ?></div>
                         <div class="stat_container">
-                            <div class="bar_value" style="width:<?php echo ($pokemon->getDefense_Spe() * 100) / 255 ?>%"></div>
+                            <div class="bar_value" style="width:<?php echo ($pokemon->getDefenseSpe() * 100) / 255 ?>%"></div>
                         </div>
                     </div>
                     <div class="stat">

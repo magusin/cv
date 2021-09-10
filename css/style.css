@@ -29,9 +29,6 @@ a {
   color: var(--text);
   text-decoration: none; }
 
-img {
-  max-width: 100%; }
-
 .title-small {
   letter-spacing: 0.2rem;
   font-size: 1.8rem; }
@@ -97,13 +94,13 @@ body {
     border-radius: 50%;
     box-shadow: 1px 1px 10px 1px black;
     background: var(--fitback);
-    height: 50%;
-    width: 50%;
+    height: 150px;
+    width: 150px;
     margin: auto;
     display: block; }
   .picture span {
     display: inline-block;
-    animation: move 2s; }
+    animation: move 3s; }
 
 li {
   font-size: 1em;
@@ -122,7 +119,7 @@ header {
   align-items: center;
   transition: all 0.2s; }
   .social-container p {
-    padding: 0 0 0 20px; }
+    padding: 0 0 0 10px; }
   .social-container:hover {
     background: var(--border); }
     .social-container:hover i {
@@ -144,7 +141,7 @@ header {
     width: 50%;
     height: 50%;
     text-align: center;
-    padding: 0.2em 2em; }
+    padding: 0.2em 1em; }
     @media (max-width: 767px) {
       .container .exp-container {
         width: auto;
@@ -158,7 +155,7 @@ header {
   background: linear-gradient(to left, var(--light), var(--background), var(--primary)); }
 
 .block {
-  padding: 0 40px;
+  padding: 0 20px;
   margin-bottom: 2rem; }
   .block .stars-container {
     display: flex;

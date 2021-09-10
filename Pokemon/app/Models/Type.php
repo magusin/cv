@@ -1,120 +1,61 @@
-<?php
+<?php 
+
 
 namespace Pokedex\Models;
 
-use Pokedex\Utils\Database;
-use PDO;
 
-class Type {
+use \PDO;
+use \PDOException;
 
-    private $id;
+class Type extends CoreModel {
+
+    /** 
+     * Propriétés stockant les informations du type
+     */
     private $name;
     private $color;
-
-
-//     select *
-// FROM type
-// INNER JOIN pokemon_type
-// ON type.id = pokemon_type.type_id
-// INNER JOIN pokemon
-// ON pokemon_type.type_id = pokemon.numero
-     /**
-      * Get the value of name
-      */ 
-      public function getName()
-      {
-           return $this->name;
-      }
- 
-      /**
-       * Set the value of name
-       *
-       * @return  self
-       */ 
-      public function setName($name)
-      {
-           $this->name = $name;
- 
-           return $this;
-      }
-
-          /**
-     * Get the value of id
-     */ 
-    public function getId()
-    {
-        return $this->id;
-    }
+    private $id;
 
     /**
-     * Set the value of id
-     *
-     * @return  self
+     * Création de getters  (pas besoin de setters pour notre utilisation !
+     * afin de récupérer les valeurs des propriétés
      */ 
-    public function setId($id)
+    public function getName()
     {
-        $this->id = $id;
-
-        return $this;
+        return $this->name;
     }
 
-    /**
-     * Get the value of color
-     */ 
     public function getColor()
     {
         return $this->color;
     }
 
-    /**
-     * Set the value of color
-     *
-     * @return  self
-     */ 
-    public function setColor($color)
+    public function getId()
     {
-        $this->color = $color;
-
-        return $this;
+        return $this->id;
     }
 
-    /**
-     * Récupérer tous les pokémons mis en avant sur la home
-     * 
-     * @return Type[]
+    /** 
+     * Méthode statique permettant de récupérer la liste des types
      */
-    public function findAllTypes()
-    {
-        $pdo = Database::getPDO();
-        $sql = "
-            SELECT *
-            FROM `type`";
-        $pdoStatement = $pdo->query($sql);
-        $types = $pdoStatement->fetchAll(PDO::FETCH_CLASS, 'Pokedex\Models\Type');
+    static public function findAll()
+	{
+        $sql = "SELECT *
+                FROM type 
+                ORDER BY name";
         
-        return $types;
-        
-    }
+        // On se connecte à la BDD grâce à la méthode statique du model parent
+		$pdo = self::getPDO();
 
-    // permet de récupérer l'ensemble des types correspondant
-    // à un numéro de pokemeon
-    public function findAllTypesByPokemonNumber ($pokemonNumber)
-    {
-        $pdo = Database::getPDO();
-        $sql = "
-            SELECT type.*
-            FROM `type`
-            INNER JOIN pokemon_type
-            ON (pokemon_type.type_id = type.id)
-            WHERE pokemon_type.pokemon_numero = $pokemonNumber";
+        // On exécute la requête
         $pdoStatement = $pdo->query($sql);
         
-        $types = $pdoStatement->fetchAll(PDO::FETCH_CLASS, 'Pokedex\Models\Type');
-        
-        return $types;
+		// On récupère tous les résultats avec "fetchAll" et on met transmet les données récupérées à une instance du model courant (Pokemon)
+		$pokemons = $pdoStatement->fetchAll(PDO::FETCH_CLASS, self::class);
+
+		// On ferme la connexion
+		unset($pdo); 
+
+		return $pokemons;
     }
-
-    
-
-
 }

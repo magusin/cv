@@ -1,36 +1,20 @@
-<h2>Cliquez sur un type pour voir tous les Pokémon de ce type</h2>
-<body>
-    <main>
-        
-    <?php foreach($typePokemons as $typePokemon): ?>
-    <div class="d-grid gap-2 type rounded-3 ">
-        <button type="button" class="btn btn-secondary height-25%" href="#" style="background-color:#<?=$typePokemon->getColor()?>">
 
-        <h5 class="mx-auto"><?= $typePokemon->getName()?></h5>
+  
+   
+    <?php  $types = $viewVars['types'];
+
+    if(!$types) {
+        echo "Oups, aucun type trouvé !";
+    } else {
+        
+        foreach ($types as $type): ?>
+        <div class="d-grid gap-2 type rounded-3 ">
+        <a href="<?= $_SERVER['BASE_URI'] . '/type/' . $type->getId() ?>">
+        <button type="button" class="btn btn-secondary height-25%" href="#" style="background-color:#<?=$type->getColor()?>">
+        <h5 class="mx-auto"><?php echo $type->getName() ?></h5>
         </div>
-    </div>
+        </a>
+        <?php endforeach;
+    }?>
 
-    </div>
-    <?php endforeach; ?>
-
-
-
-
-    <div id="type">
-        
-        
-
-    </main>
-</body>
-
-</html>
-
-
-
-
-
-
-
-
-
-
+ 
