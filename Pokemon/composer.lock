@@ -95,8 +95,8 @@
             ],
             "authors": [
                 {
-                    "name": "benoclock",
-                    "email": "benjamin@oclock.io"
+                    "name": "Hugo",
+                    "email": "hugo.jacques71@gmail.com"
                 }
             ],
             "description": "AltoDispatcher is a simple and easy-to-use class for dispatching after AltoRouter routing",
