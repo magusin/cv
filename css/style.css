@@ -14,12 +14,6 @@ body {
 p {
   margin: 1rem 0; }
 
-#background {
-  z-index: -5;
-  position: fixed;
-  height: 100vh;
-  width: 100%; }
-
 h1,
 h2,
 h3,
@@ -28,6 +22,10 @@ h5,
 h6 {
   margin: 1rem 0 2rem 0; }
 
+li {
+  font-size: 1em;
+  width: auto; }
+
 ul {
   list-style: none; }
 
@@ -35,12 +33,19 @@ a {
   color: var(--text);
   text-decoration: none; }
 
+img {
+  max-width: 100%; }
+
 .title-small {
   letter-spacing: 0.2rem;
   font-size: 1.8rem; }
 
 .text-primary {
   color: var(--primary); }
+
+.projet-in {
+  text-decoration: underline;
+  color: #1b976e; }
 
 .mb-5 {
   margin-bottom: 5rem !important; }
@@ -67,12 +72,8 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  border-bottom: 2px solid #6d6d6d;}
-  
-.projet-in {
-  text-decoration: underline;
-  color: rgb(27, 151, 110);
-}
+  border-bottom: 2px solid #6d6d6d; }
+
 @keyframes move {
   0% {
     transform: rotate(-20deg); }
@@ -98,6 +99,12 @@ body {
     body {
       flex-direction: column; } }
 
+#background {
+  z-index: -5;
+  position: fixed;
+  height: 100vh;
+  width: 100%; }
+
 .picture {
   align-items: center;
   margin: auto; }
@@ -105,17 +112,18 @@ body {
     border-radius: 50%;
     box-shadow: 1px 1px 10px 1px black;
     background: var(--fitback);
-    height: 150px;
-    width: 150px;
+    height: 50%;
+    width: 50%;
     margin: auto;
     display: block; }
   .picture span {
     display: inline-block;
-    animation: move 3s; }
+    animation: move 2s; }
 
-li {
-  font-size: 1em;
-  width: auto; }
+.projet-in {
+  text-decoration: underline;
+  color: #1b976e;
+  border-bottom: 1px border black; }
 
 header {
   width: 300px;
@@ -130,12 +138,12 @@ header {
   align-items: center;
   transition: all 0.2s; }
   .social-container p {
-    padding: 0 0 0 10px; }
+    padding: 0 0 0 20px; }
   .social-container:hover {
     background: var(--border); }
     .social-container:hover i {
       color: var(--primary);
-      transform: scale(1.3);
+      transition: scale(1.3);
       transition: all 0.2s; }
   .social-container a {
     text-decoration: underline; }
@@ -152,7 +160,7 @@ header {
     width: 50%;
     height: 50%;
     text-align: center;
-    padding: 0.2em 1em; }
+    padding: 0.2em 2em; }
     @media (max-width: 767px) {
       .container .exp-container {
         width: auto;
@@ -166,7 +174,7 @@ header {
   background: linear-gradient(to left, var(--light), var(--background), var(--primary)); }
 
 .block {
-  padding: 0 20px;
+  padding: 0 40px;
   margin-bottom: 2rem; }
   .block .stars-container {
     display: flex;
