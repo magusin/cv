@@ -38,11 +38,13 @@ body {
     animation: move 2s;
   }
 }
-
-li {
-  font-size: 1em;
-  width: auto;
+.projet-in {
+  text-decoration: underline;
+  color: rgb(27, 151, 110);
+  border-bottom: 1px border black;
 }
+
+
 
 header {
   width: 300px;
